@@ -1,4 +1,28 @@
 # Zappy
-This project is game server where IA are playing to stay alive. The server has been developed in C, the GUI in C++ using the SFML and the IA in C++
 
-Before trying to compile it, you have to install the SFML library and after just use the Makefile to compile everything
+A multiplayer game server where AI players try to survive, with a graphical client to watch the game.
+
+## Components
+| Folder | Language | Binary | Role |
+|---|---|---|---|
+| `ZappyServer/` | C | `zappy` | Game server |
+| `ZappyGUI/` | C++11 + SFML | `zappy_gui` | Graphical client |
+| `ZappyIA/` | C++ | `clientIA` | AI client |
+
+The AI reads its connection settings from `ZappyIA/config.xml` (default `127.0.0.1:4242`).
+
+## Requirements
+`gcc`, `g++`, `make`, and [SFML](https://www.sfml-dev.org/) (graphics, window, system, audio).
+
+## Build
+```bash
+make          # everything
+make server   # or: make gui / make ia
+make clean    # or: make fclean
+```
+
+## Status
+Archived, no further development planned.
+
+## License
+MIT
